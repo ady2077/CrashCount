@@ -1,0 +1,118 @@
+body {
+    font-family: 'Orbitron', sans-serif;
+    background: linear-gradient(135deg, #1a0d0d, #2e1a1a, #5e3a3a); /* Red-black gradient */
+    background-size: 400% 400%;
+    animation: gradientShift 8s ease infinite; /* Fast and intense */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 0%; }
+    50% { background-position: 100% 100%; }
+    100% { background-position: 0% 0%; }
+}
+
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.container {
+    position: relative;
+    z-index: 2;
+    width: 320px;
+    background: rgba(46, 26, 26, 0.9);
+    border-radius: 0 0 25px 25px; /* Sharp top, rounded bottom */
+    box-shadow: 0 0 35px rgba(140, 58, 58, 0.8), inset 0 0 15px rgba(255, 0, 0, 0.2);
+    border: 3px solid #ff4500; /* Bright red border */
+    backdrop-filter: blur(10px); /* Heavy blur for holographic feel */
+    transform: perspective(500px) rotateX(5deg); /* 3D tilt */
+}
+
+.tab-header {
+    background: #ff4500; /* Orange-red tab */
+    color: #1a0d0d;
+    padding: 12px;
+    font-size: 26px;
+    text-align: center;
+    border-radius: 0; /* Flat top */
+    text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000;
+    animation: glitch 2s infinite; /* Glitchy effect */
+    border-bottom: 2px solid #ff0000;
+}
+
+@keyframes glitch {
+    0% { text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000; }
+    20% { text-shadow: 2px 2px 15px #ff0000, -2px -2px 25px #ff0000; }
+    40% { text-shadow: -2px 2px 10px #ff0000, 2px -2px 20px #ff0000; }
+    60% { text-shadow: 0 0 15px #ff0000, 0 0 25px #ff0000; }
+    100% { text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000; }
+}
+
+.tab-content {
+    padding: 25px;
+    text-align: center;
+}
+
+p {
+    color: #ff9999;
+    text-shadow: 0 0 8px #ff4500;
+    margin: 0 0 20px;
+}
+
+.crash-display {
+    font-size: 24px;
+    color: #ffcccc;
+    text-shadow: 0 0 10px #ff0000;
+    padding: 15px;
+    background: rgba(94, 58, 58, 0.3);
+    border-radius: 10px;
+    margin: 20px 0;
+    transition: all 0.3s ease;
+}
+
+.crash-display:hover {
+    background: rgba(94, 58, 58, 0.6);
+    box-shadow: 0 0 15px #ff4500;
+}
+
+button {
+    padding: 12px 25px;
+    background: #ff4500;
+    color: #1a0d0d;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 0 20px #ff4500, 0 0 30px #ff4500;
+    animation: pulse 0.8s infinite; /* Fast pulse */
+    transition: all 0.3s ease;
+    margin: 5px;
+}
+
+button:hover {
+    background: #e03d00;
+    box-shadow: 0 0 30px #ff4500, 0 0 40px #ff4500;
+}
+
+.reset-btn {
+    background: #ff9999; /* Lighter red for reset */
+    box-shadow: 0 0 20px #ff9999, 0 0 30px #ff9999;
+}
+
+.reset-btn:hover {
+    background: #ff8080;
+    box-shadow: 0 0 30px #ff9999, 0 0 40px #ff9999;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); box-shadow: 0 0 20px #ff4500; }
+    50% { transform: scale(1.1); box-shadow: 0 0 30px #ff4500; }
+    100% { transform: scale(1); box-shadow: 0 0 20px #ff4500; }
+}
